@@ -6,8 +6,13 @@
 #include "config.h"
 
 void print_vec(std::vector<int> &vec){
+    
+    fmt::print("{}", "[");
+
     for (int x : vec)
         fmt::print("{} ", x);
+
+    fmt::print("{}\n", "]");
 }
 
 auto main(int argc, char **argv) -> int
@@ -40,6 +45,10 @@ auto main(int argc, char **argv) -> int
         vec[i] = rand() % 100 + 1;
 
     }
+
+    print_vec(vec);
+
+    sort(vec.begin(), vec.end());
 
     print_vec(vec);
 
