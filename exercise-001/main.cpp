@@ -1,8 +1,14 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
+#include <vector>
 
 #include "CLI/CLI.hpp"
 #include "config.h"
+
+void print_vec(std::vector<int> &vec){
+    for (int x : vec)
+        fmt::print("{} ", x);
+}
 
 auto main(int argc, char **argv) -> int
 {
@@ -25,6 +31,17 @@ auto main(int argc, char **argv) -> int
     {
         return app.exit(e);
     }
+
+
+    std::vector<int> vec(count);
+
+    for(int i = 0; i < count; i++){
+
+        vec[i] = rand() % 100 + 1;
+
+    }
+
+    print_vec(vec);
 
     /**
      * The {fmt} lib is a cross platform library for printing and formatting text
