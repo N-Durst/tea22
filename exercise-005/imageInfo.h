@@ -1,5 +1,5 @@
-#ifndef IMAGEINFO.H
-#define IMAGEINFO.H
+#ifndef IMAGEINFO_H
+#define IMAGEINFO_H
 
 struct ImageInfo{
 

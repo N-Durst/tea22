@@ -34,5 +34,9 @@ auto main(int argc, char **argv) -> int
 
     fmt::println("Size of the image data: {}",sizeof(image));
 
+    ImageInfo* pImageInfo = newImageInfo();
+
+
+
     return 0; /* exit gracefully*/
 }
