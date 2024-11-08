@@ -16,9 +16,7 @@ find_package(fmt REQUIRED)
 add_executable(${PROJECT_NAME} main.cpp)
 
 # Add libraries
-target_link_libraries(${PROJECT_NAME} PRIVATE
-                                        fmt::fmt
-)
+target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt)
 
 # This creates a custom command that prints out the firmware binary size information.
 # Text is the code, data stores variables that have a non-zero initial value and have to be stored in flash,

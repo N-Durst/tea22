@@ -1,51 +1,40 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
 
-/* .bss Segment */
-int foo;
-int foo2 = 0;
 
-/* .data Segment */
-int data = 45;
-int data2 = 43;
-
-/* .rodata Segment */
-const int rodata = 45;
-const int rodata2 = 43;
-
-
-
-void doSomething(int value)
+struct person
 {
-    value = value + 1;
-    fmt::print("doSomething, value {}\n", value);
-}
+    /* data */
+    unsigned int alter;
 
-void doSomethingPtr(int* ptr)
-{
-    *ptr = *ptr + 1;
-    fmt::print("doSomethingPtr, value {}\n", *ptr);
-}
+    float gewicht;
 
-int* doReturnAPtr()
-{
-    int value = 4711;
-    fmt::print("doReturnAPtr, value {}\n", value);
-    return &value;
-}
+    char name[25];
+};
 
-void doSomethingStatic()
-{
-    static int value = 56;
-    value = value + 1;
-    fmt::print("doSomethingStatic, value {}\n", value);
-}
+person paul;
+
+person *pPers;
+
 auto main(int argc, char** argv) -> int
 {
     /**
      * The {fmt} lib is a cross platform library for printing and formatting text
      * it is much more convenient than std::cout and printf
      * More info at https://fmt.dev/latest/api.html
+     * */
+
+    paul.alter = 23;
+
+    paul.gewicht = 70.5;
+
+    strncpy(paul.name, "Paul", sizeof(paul.name) / sizeof(paul.name[0]));
+
+    pPers = &paul;
+    
+    fmt::print("Paul ist {} Jahre alt\n", pPers->alter);
+
+    fmt::print("Sein Name ist: {}", pPers->name);
     
 
     return 0; /* exit gracefully*/
