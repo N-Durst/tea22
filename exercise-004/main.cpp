@@ -38,6 +38,10 @@ auto main(int argc, char** argv) -> int
     fmt::print("Sein Name ist: {}", pPers->name);
 
     Triangle* trig = newTriangle();
+
+    freeTriangle(trig);
+
+    trig = newTriangle();
     
 
     return 0; /* exit gracefully*/

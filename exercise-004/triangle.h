@@ -12,5 +12,7 @@ struct Triangle{
 
 Triangle* newTriangle();
 
+void freeTriangle(Triangle* ptr);
+
 
 #endif

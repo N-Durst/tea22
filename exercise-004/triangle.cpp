@@ -17,3 +17,8 @@ Triangle* newTriangle(){
 
     return temp;
 }
+
+void freeTriangle(Triangle* ptr){
+
+    free(ptr);
+}
