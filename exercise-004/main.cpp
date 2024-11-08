@@ -1,5 +1,6 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
+#include "triangle.h"
 
 
 struct person
@@ -32,9 +33,11 @@ auto main(int argc, char** argv) -> int
 
     pPers = &paul;
     
-    fmt::print("Paul ist {} Jahre alt\n", pPers->alter);
+    fmt::print("{} ist {} Jahre alt\n", pPers->name, pPers->alter);
 
     fmt::print("Sein Name ist: {}", pPers->name);
+
+    Triangle* trig = newTriangle();
     
 
     return 0; /* exit gracefully*/
