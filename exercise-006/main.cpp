@@ -9,9 +9,25 @@ auto main(int argc, char** argv) -> int
 
     List_t myList;
 
-    insertAtBeginning(&myList, 1);
+    for(int i = 1; i <= 3; i++){
 
-    insertAtTheEnd(&myList, 2);
+         insertAtTheEnd(&myList, i);
+
+    }
+
+
+    deleteFromPos(&myList, 2);
+
+    ListNode_t* temp = myList.pHead;
+
+    for(int i = 1; i <= (myList.size); i++){
+
+        fmt::print("Data of List: {} \n",temp->data);
+        temp = temp->pNext;
+
+    }
+
+    free(temp);
 
     /**
      * The {fmt} lib is a cross platform library for printing and formatting text
@@ -20,9 +36,6 @@ auto main(int argc, char** argv) -> int
      */
     fmt::print("Hello, {}!\n", argv[0]);
 
-    fmt::print("Data from Head {} \n", myList.pHead->data);
-
-    fmt::print("Data from Tail {} \n", myList.pTail->data);
 
     return 0; /* exit gracefully*/
 }

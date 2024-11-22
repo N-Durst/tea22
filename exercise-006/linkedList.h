@@ -20,6 +20,6 @@ int insertAtBeginning(List_t* list, unsigned int data);
 
 int insertAtTheEnd(List_t* list, unsigned int data);
 
-int removeFromLinkedList(List_t* list, ListNode* elem);
+int deleteFromPos(List_t* list, unsigned int pos);
 
 #endif

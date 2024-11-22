@@ -58,3 +58,32 @@ int insertAtTheEnd(List_t* list, unsigned int data){
     return list->size;
 
 }
+
+
+int deleteFromPos(List_t* list, unsigned int pos){
+
+    if ((pos >= 2) && (pos < list->size)){
+
+        //Beispiel mit 3 linked list, pos == 2
+
+        ListNode_t* temp = list->pHead;
+
+        for (int i = 1; i < (pos-1); i++){
+
+            temp = temp->pNext; //wird in diesem Beispiel nicht ausgeführt
+
+        }
+
+        ListNode_t* tempPnext = temp->pNext; //pNext von Speicherbereich 1 zeigt auf 2
+
+        temp->pNext = temp->pNext->pNext; //pNext von Speicherbereich 1 zeigt auf 3
+
+        free(tempPnext); //löscht Speicherbereich 2
+
+        list->size = list->size - 1;
+
+    }
+
+    return 0;
+
+}
