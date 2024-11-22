@@ -16,8 +16,8 @@ typedef struct List {
 
 
 
-int insertIntoLinkedList(linkedList* List, unsigned int data);
+int insertAtBeginning(List_t* list, unsigned int data);
 
-int removeFromLinkedList(linkedList* List, ListNode* elem);
+int removeFromLinkedList(List_t* list, ListNode* elem);
 
 #endif
