@@ -22,4 +22,6 @@ int insertAtTheEnd(List_t* list, unsigned int data);
 
 int deleteFromPos(List_t* list, unsigned int pos);
 
+void deleteListNode(ListNode_t* node);
+
 #endif

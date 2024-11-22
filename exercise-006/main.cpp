@@ -9,14 +9,14 @@ auto main(int argc, char** argv) -> int
 
     List_t myList;
 
-    for(int i = 1; i <= 3; i++){
+    for(int i = 1; i <= 4; i++){
 
          insertAtTheEnd(&myList, i);
 
     }
 
 
-    deleteFromPos(&myList, 2);
+    deleteFromPos(&myList, 3);
 
     ListNode_t* temp = myList.pHead;
 

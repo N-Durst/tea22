@@ -9,6 +9,11 @@ ListNode_t* newListNode(void){
     return (ListNode_t*) malloc(sizeof(ListNode_t));
 }
 
+void deleteListNode(ListNode_t* node){
+
+    free(node);
+
+}
 
 
 
@@ -78,7 +83,7 @@ int deleteFromPos(List_t* list, unsigned int pos){
 
         temp->pNext = temp->pNext->pNext; //pNext von Speicherbereich 1 zeigt auf 3
 
-        free(tempPnext); //löscht Speicherbereich 2
+        deleteListNode(tempPnext);//löscht Speicherbereich 2
 
         list->size = list->size - 1;
 
