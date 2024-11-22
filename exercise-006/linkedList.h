@@ -14,9 +14,11 @@ typedef struct List {
     unsigned int size;
 }List_t;
 
-
+ListNode_t* newListNode(void);
 
 int insertAtBeginning(List_t* list, unsigned int data);
+
+int insertAtTheEnd(List_t* list, unsigned int data);
 
 int removeFromLinkedList(List_t* list, ListNode* elem);
 
