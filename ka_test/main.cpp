@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 
     //unsigned int *pData = &data;
 
-    //myFunction(&data, 3);
+    myFunction(&data, 3);
 
     fmt::println("Wert von Data: {}",data);
 
